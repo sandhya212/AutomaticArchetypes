@@ -1,0 +1,35 @@
+CFLAGS  =	-O3 -fPIC
+
+
+EXOBJS	=	MultiTaskLassoForR.o\
+                one_infty.o \
+		mymat.o \
+		mymat_bool.o	 \
+		mymat_bool_scale.o \
+		myvec.o	
+
+all:	MultiTaskLassoForR.so	
+
+clean:
+	rm $(EXOBJS) *.so
+
+MultiTaskLassoForR.so:	$(EXOBJS)
+	g++ $(CFLAGS)  -shared -o $@  $(EXOBJS)
+
+
+one_infty.o:    MultiTask_Lasso.cpp     MultiTask_Lasso.h
+		g++ $(CFLAGS) -c -o $@  $<
+
+
+MultiTaskLassoForR.o:  MultiTaskLassoForR.cpp 
+	g++   $(CFLAGS)  -c -o $@  $<
+
+mymat.o: my_mat.cpp my_mat.h
+	g++ $(CFLAGS) -c -o $@  $<
+
+myvec.o: my_vec.cpp my_vec.h
+	g++ $(CFLAGS) -c -o $@  $<
+mymat_bool.o: my_mat_bool.cpp my_mat_bool.h
+	g++ $(CFLAGS) -c -o $@  $<
+mymat_bool_scale.o: my_mat_bool_scale.cpp my_mat_bool_scale.h
+	g++ $(CFLAGS) -c -o $@  $<
