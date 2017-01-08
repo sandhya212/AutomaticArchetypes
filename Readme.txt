@@ -4,7 +4,7 @@ This package has R and adjoining C++ source code for Prabhakaran, Sandhya, Sudhi
 Please cite the above paper if you use our code in your research.  
 
 
-Code authors - Prof. Dr. Volker Roth and Dr.Sandhya Prabhakaran,
+Code authors - Prof. Dr. Volker Roth and Dr. Sandhya Prabhakaran,
                Department of Mathematics and Computer Science
                University of Basel, Switzerland
 
