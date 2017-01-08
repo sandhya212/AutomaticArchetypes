@@ -5,7 +5,7 @@ Please cite the above paper if you use our code in your research.
 
 
 Code authors - Prof. Dr. Volker Roth and Dr. Sandhya Prabhakaran,
-               Department of Mathematics and Computer Science
+               Department of Mathematics and Computer Science,
                University of Basel, Switzerland
 
 February 2012.
